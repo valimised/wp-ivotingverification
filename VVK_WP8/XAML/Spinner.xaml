@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="VVK_WP8.Spinner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+    
+    <Grid x:Name="LayoutRoot" Background="Transparent" Width="320" Height="320">
+        <Path Stroke="Transparent" Fill="Blue" x:Name="SpinnerBackground">
+            <Path.Data>
+                <RectangleGeometry Rect="0,0,320,320"/>
+            </Path.Data>
+        </Path>
+        <Image Source="/Assets/spinner.png" Width="100" RenderTransformOrigin="0.5, 0.5">
+            <Image.RenderTransform>
+                <RotateTransform x:Name="rotateTransform"/>
+            </Image.RenderTransform>
+            <Image.Resources>
+                <Storyboard x:Key="spin">
+                    <DoubleAnimation x:Name="da" 
+                             Storyboard.TargetName="TransRotate" 
+                             Storyboard.TargetProperty="Angle"
+                             By="360" 
+                             Duration="0:0:10"  
+                             AutoReverse="False" 
+                             RepeatBehavior="Forever" />
+                </Storyboard>
+            </Image.Resources>
+        </Image>
+
+    </Grid>
+</UserControl>
