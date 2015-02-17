@@ -48,7 +48,7 @@
                 <RowDefinition Height="160"/>
                 <RowDefinition Height="160"/>
             </Grid.RowDefinitions>
-            <TextBlock Height="160" x:Name="PopupMessage_Title" Margin="10,10,10,0" FontSize="28" Foreground="White" Grid.Row="0" Grid.Column="0"  Text="Kas tahad vajutada Cancel voi OK nuppu ?" TextWrapping="Wrap" VerticalAlignment="Top" Grid.RowSpan="2"/>
+            <TextBlock Height="160" x:Name="PopupMessage_Title" Margin="10,10,10,0" FontSize="27" Foreground="White" Grid.Row="0" Grid.Column="0"  Text="Seda hääle identifikaatorit pole võimalik hääle kontrollimiseks kasutada" TextWrapping="Wrap" VerticalAlignment="Top" Grid.RowSpan="2"/>
             <StackPanel Height="160" x:Name="ButtonsStackPanel" Background="Transparent" Margin="10,0,10,10" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Margin="0,0,-8,0" Width="170" Foreground="#FF707070" Background="White" x:Name="Button1" ClickMode="Press" BorderThickness="0" Content="Cancel"/>
                 <Button Margin="-8,0,0,0" Width="170" Foreground="#FF707070" Background="White" x:Name="Button2" ClickMode="Press" BorderThickness="0" Content="OK"/>

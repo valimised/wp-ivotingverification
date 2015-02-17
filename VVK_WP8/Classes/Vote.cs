@@ -131,10 +131,10 @@ namespace VVK_WP8
                     throw new ArgumentNullException();
 
                 VVK_WPRC.CurlUtil cutil = new VVK_WPRC.CurlUtil();
-                string post_data = "vote=" + voteContainerId;
+                string post_data = "verify=" + voteContainerId;
                 
                 string result = cutil.DownloadWithCert(verificationUri, true, post_data, VERIFICATION_CERT);
-                if (result == null)
+                if (result == null || result.Equals(""))
                 {
                     completedEvent(VerificationStatus.Failure);
                     return;

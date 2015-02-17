@@ -101,7 +101,9 @@ namespace VVK_WP8
             _closeTimeLeft = _closeTimeout;
 
             SetResetWarningText(_closeTimeLeft);
-            
+
+            InitResultTitle();
+
             _appResetTimer = new Timer(new TimerCallback((o) =>
             {
                 Conf conf = Conf.Instance;
@@ -134,6 +136,11 @@ namespace VVK_WP8
         {
             string closeText = Conf.Instance.Model.AppConfig.Texts.LblCloseTimeout;
             ResetWarning.Text = closeText.Replace("XX", (milliseconds / 1000).ToString());
+        }
+
+        private void InitResultTitle()
+        {
+            ResultTitle.Text = Conf.Instance.Model.AppConfig.Texts.LblChoice;
         }
     }
 }

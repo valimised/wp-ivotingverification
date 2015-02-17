@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace VVK_WP8
 {
@@ -34,10 +35,17 @@ namespace VVK_WP8
             }
             else
             {
-                throw new ArgumentException("Invalid web color"); 
+                throw new ArgumentException("Invalid web color");
             }
 
             return System.Windows.Media.Color.FromArgb(255, R, G, B);
+        }
+
+        public static Boolean isCorrectQR(string input)
+        {
+            Match m = Regex.Match(input, @"^\w{40}\r\n(\w{1,28}\t([A-Fa-f0-9]){40}\r\n){1,5}");
+
+            return m.Success;
         }
     }
 }

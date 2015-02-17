@@ -14,7 +14,8 @@ namespace VVK_WP8
 {
     class Conf
     {
-        private const string CONF_URL = "https://www.valimised.ee/config.json";
+        private const string CONF_URL_LIVE = "https://www.valimised.ee/config.json";
+        private const string CONF_URL = CONF_URL_LIVE;
         private const string CONF_CERT = "Juur-SK.pem.crt";
 
         private static Conf _instance = null;
@@ -71,7 +72,7 @@ namespace VVK_WP8
                 VVK_WPRC.CurlUtil cutil = new VVK_WPRC.CurlUtil();
 
                 string output = cutil.DownloadWithCert(CONF_URL, false, "", CONF_CERT);
-
+                Debug.WriteLine(output);
                 if (output == null || output.Length < 1)
                 {
                     completedEvent(false);

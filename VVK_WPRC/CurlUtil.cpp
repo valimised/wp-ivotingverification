@@ -50,6 +50,7 @@ Platform::String^ CurlUtil::DownloadWithCert(Platform::String^ url_string, Platf
         std::string response;
         
 		char error_buf[CURL_ERROR_SIZE];
+		curl_easy_setopt(curl, CURLOPT_USERAGENT, "WP VVK");
 		curl_easy_setopt(curl, CURLOPT_ERRORBUFFER, &error_buf[0]); 
 		curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 1);
 		curl_easy_setopt(curl, CURLOPT_CAINFO, cert_file.c_str());

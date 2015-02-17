@@ -220,6 +220,8 @@
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
     </None>
+    <None Include="VVK_WP8_2015_01_23_15_51_48.sap" />
+    <None Include="VVK_WP8_2015_01_23_16_08_09.sap" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\AlignmentGrid.png" />
@@ -245,7 +247,9 @@
     </Content>
     <Content Include="iconicTileMedium.png" />
     <Content Include="iconicTileSmall.png" />
+    <Content Include="ico_110x110.png" />
     <Content Include="ico_173x173.png" />
+    <Content Include="ico_202x202.png" />
     <Content Include="ico_300x300.png" />
   </ItemGroup>
   <ItemGroup>

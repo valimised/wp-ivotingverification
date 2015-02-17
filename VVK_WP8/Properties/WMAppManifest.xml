@@ -5,7 +5,7 @@
     <Language code="et" />
     <Language code="et-EE" />
   </Languages>
-  <App xmlns="" ProductID="{c17fb248-2be4-4b0f-bc3d-7e9ddc476491}" Title="Valimised" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Applaud OÜ" Description="Eesti Vabariigi Valitsuse E-hääletuse häälekontroll" Publisher="Eesti Vabariigi Valitsus" PublisherID="{d96fe6b0-02df-47d6-99d2-b147c603b070}">
+  <App xmlns="" ProductID="{c17fb248-2be4-4b0f-bc3d-7e9ddc476491}" Title="Valimised" RuntimeType="Silverlight" Version="1.0.1.0" Genre="apps.normal" Author="Applaud OÜ" Description="Eesti Vabariigi Valitsuse E-hääletuse häälekontroll" Publisher="Eesti Vabariigi Valitsus" PublisherID="{d96fe6b0-02df-47d6-99d2-b147c603b070}">
     <IconPath IsRelative="true" IsResource="false">ico_173x173.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
@@ -19,34 +19,30 @@
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="VVK_WP8Token" TaskName="_default">
-        <TemplateIconic>
-          <SmallImageURI IsRelative="true" IsResource="false">iconicTileSmall.png</SmallImageURI>
+        <TemplateFlip>
+          <SmallImageURI IsRelative="true" IsResource="false">ico_202x202.png</SmallImageURI>
           <Count>0</Count>
-          <IconImageURI IsRelative="true" IsResource="false">iconicTileMedium.png</IconImageURI>
-          <Title>Valimised</Title>
-          <Message>
-          </Message>
-          <BackgroundColor>
-          </BackgroundColor>
-          <HasLarge>false</HasLarge>
-          <LargeContent1>
-          </LargeContent1>
-          <LargeContent2>
-          </LargeContent2>
-          <LargeContent3>
-          </LargeContent3>
+          <BackgroundImageURI IsRelative="true" IsResource="false">ico_300x300.png</BackgroundImageURI>
+          <Title>
+          </Title>
+          <BackContent>
+          </BackContent>
+          <BackBackgroundImageURI IsRelative="true" IsResource="false">
+          </BackBackgroundImageURI>
+          <BackTitle>
+          </BackTitle>
           <DeviceLockImageURI IsRelative="true" IsResource="false">
           </DeviceLockImageURI>
-        </TemplateIconic>
+          <HasLarge>False</HasLarge>
+        </TemplateFlip>
       </PrimaryToken>
     </Tokens>
     <ScreenResolutions>
-      <ScreenResolution Name="ID_RESOLUTION_WVGA" />
       <ScreenResolution Name="ID_RESOLUTION_WXGA" />
+      <ScreenResolution Name="ID_RESOLUTION_WVGA" />
       <ScreenResolution Name="ID_RESOLUTION_HD720P" />
     </ScreenResolutions>
     <Requirements>
-      <Requirement Name="ID_REQ_FRONTCAMERA" />
       <Requirement Name="ID_REQ_REARCAMERA" />
     </Requirements>
   </App>

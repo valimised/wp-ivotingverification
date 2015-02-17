@@ -39,27 +39,30 @@ namespace VVK_WP8
         {
             ElectionHexSeeds = new Dictionary<string, string>();
 
-            string[] components = input.Split(new string[]{"\r\n"}, StringSplitOptions.None);
 
-            if (components.Length > 0)
+            if (Util.isCorrectQR(input))
             {
-                VoteContainerId = components[0];
-                if (components.Length > 1)
-                {
-                    for (int i = 1; i < components.Length; i++)
-                    {
-                        string[] rowComponents = components[i].Split('\t');
-                        if (rowComponents.Length > 1)
-                        {
-                            ElectionHexSeeds.Add(rowComponents[0], rowComponents[1]);
-                        }
-                    }
+                string[] components = input.Split(new string[] { "\r\n" }, StringSplitOptions.None);
 
-                    if (ElectionHexSeeds.Count > 0)
-                        return true;
+                if (components.Length > 0)
+                {
+                    VoteContainerId = components[0];
+                    if (components.Length > 1)
+                    {
+                        for (int i = 1; i < components.Length; i++)
+                        {
+                            string[] rowComponents = components[i].Split('\t');
+                            if (rowComponents.Length > 1)
+                            {
+                                ElectionHexSeeds.Add(rowComponents[0], rowComponents[1]);
+                            }
+                        }
+
+                        if (ElectionHexSeeds.Count > 0)
+                            return true;
+                    }
                 }
             }
-
             return false;
         }
     }

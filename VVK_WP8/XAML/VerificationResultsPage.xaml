@@ -23,7 +23,7 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="2,20,0,0" VerticalAlignment="Center">
-            <TextBlock Foreground="#FFFFFF" Text="TUVASTATUD VALIK" Style="{StaticResource PhoneTextNormalStyle}" FontSize="36" FontWeight="Bold"/>
+            <TextBlock x:Name="ResultTitle" Foreground="#FFFFFF" Text="TUVASTATUD VALIK" Style="{StaticResource PhoneTextNormalStyle}" FontSize="36" FontWeight="Bold"/>
         </StackPanel>
 
         <Grid Height="60" Grid.Row="1" Margin="15,10,15,0" VerticalAlignment="Top" Background="#FFFFDC00">
@@ -33,43 +33,46 @@
             </Grid.ColumnDefinitions>
             <Image Grid.Column="0" Width="35" Height="35" Source="/Assets/ico_note.png" VerticalAlignment="Center"/>
             <TextBlock x:Name="ResetWarning" Grid.Column="1" Text="Rakendus sulgub 30 sekundi pärast" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="Black" FontSize="22"/>
-            
+
         </Grid>
 
         <!--<Grid Grid.Row="2" Margin="15,0,15,0">
             <ScrollViewer>
                 <StackPanel>
+                    
+                    
                     <Grid Background="{Binding LblOuterContainerBackground}" Margin="0,0,0,15">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="30"/>
                             <RowDefinition Height="155"/>
                         </Grid.RowDefinitions>
-                        <TextBlock Margin="10,0,0,0" Grid.Row="0" Foreground="#000000" Text="asdf" FontSize="22"/>
+                        <TextBlock Margin="10,0,0,0" Grid.Row="0" Foreground="{Binding LblOuterContainerForeground}" Text="{Binding ElectionName}" FontSize="22"/>
                         <Grid Grid.Row="1" Background="{Binding LblInnerContainerBackground}">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="120"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock HorizontalAlignment="Left" Padding="0,2,13,0" Margin="10,0,0,0" Foreground="AntiqueWhite" Grid.Row="0" Grid.Column="0" Text="#109" FontSize="30"></TextBlock>
-                            <Grid Grid.Row="0" Grid.Column="1" Background="Azure">
+                            <TextBlock HorizontalAlignment="Left" Padding="0,2,13,0" Margin="10,0,0,0" Foreground="{Binding LblInnerContainerForeground}" Grid.Row="0" Grid.Column="0" Text="{Binding Code}" FontSize="30"></TextBlock>
+                            <Grid Grid.Row="0" Grid.Column="1" Background="{Binding LblInnerContainerBackground}">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="120"/>
-                                    <RowDefinition Height="35"/>
+                                    <RowDefinition Height="100"/>
+                                    <RowDefinition Height="30"/>
                                 </Grid.RowDefinitions>
-                                
-                                <TextBlock Padding="0,2,0,0" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="{Binding LblInnerContainerForeground}" Grid.Row="0" Grid.Column="0" Text="VERONIKA RAUDSEPP" FontSize="30" Height="120" TextWrapping="Wrap"/>
-                                <TextBlock VerticalAlignment="Center" LineHeight="0" Foreground="Black" Margin="10,-6,10,0" Grid.Row="1" Grid.Column="0" Text="asdf" TextWrapping="Wrap"></TextBlock>
+                                <TextBlock Padding="0,2,0,0" VerticalAlignment="Top" Margin="10,0,0,0" Foreground="{Binding LblInnerContainerForeground}" Grid.Row="0" Grid.Column="0" Text="{Binding Name}" FontSize="30" Height="100" TextWrapping="Wrap"></TextBlock>
+                                <TextBlock VerticalAlignment="Bottom" Foreground="{Binding LblInnerContainerForeground}" Margin="10,0,10,-15" Grid.Column="0" Text="Erakond Eesti Kristlikud Demokraadid" TextWrapping="Wrap" Height="50" Grid.RowSpan="2"/>
                             </Grid>
                         </Grid>
                     </Grid>
+                    
+                    
                 </StackPanel>
             </ScrollViewer>
-        </Grid>
-        -->
-        
+        </Grid>-->
+
+
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="2" Margin="15,10,15,0">
-            
+
             <phone:LongListSelector Margin="0,10" Name="ResultsList" HorizontalAlignment="Left" Width="456">
                 <phone:LongListSelector.ItemTemplate>
                     <DataTemplate>
@@ -91,7 +94,7 @@
                                         <RowDefinition Height="30"/>
                                     </Grid.RowDefinitions>
                                     <TextBlock Padding="0,2,0,0" VerticalAlignment="Top" Margin="10,0,0,0" Foreground="{Binding LblInnerContainerForeground}" Grid.Row="0" Grid.Column="0" Text="{Binding Name}" FontSize="30" Height="100" TextWrapping="Wrap"></TextBlock>
-                                    <TextBlock VerticalAlignment="Bottom" Foreground="{Binding LblInnerContainerForeground}" Margin="10,-6,10,0" Grid.Row="1" Grid.Column="0" Text="{Binding Party}" TextWrapping="Wrap"></TextBlock>
+                                    <TextBlock VerticalAlignment="Bottom" Foreground="{Binding LblInnerContainerForeground}" Margin="10,0,10,-15" Grid.RowSpan="2" Grid.Row="1" Grid.Column="0" Text="{Binding Party}" TextWrapping="Wrap" Height="50"></TextBlock>
                                 </Grid>
                             </Grid>
                         </Grid>
