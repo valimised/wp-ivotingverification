@@ -1,45 +1,10 @@
-Valimiste Häälekontrollrakendus
-==============
+ivoteverification
+=================
 
-Requirements
---------
+*NB! This repository is deprecated. This code base is not used anymore.*
 
-- Visual Studio 2012
-- Windows Phone 8.0 SDK
-- Windows 8.0
+Windows Phone based vote verification application for Estonian i-voting system
 
+The intention behind this repository is to make source code of the official i-vote verification application for Estonian internet-voting system available for public review.
 
-Library dependencies
---------
-
-- ZXing WP8.0 Version 0.12.0.0
-- libCurl, ported to Windows Phone 8
-- OpenSSL, ported to Windows Phone 8
-- VVK_WPRC (VVK Windows Phone Runtime Component)
-
-Configuration
---------
-
-- Server Root Certificate to check against is at <Project root>/VVK_WP8/certificate.crt
-- Configuration file path is defined in Conf.cs file as the constant CONF_URL
-
-
-Building
---------
-
-- Checkout and build
-
-
-Additional information
---------
-
-- libCurl is needed for verifying HTTPS certificates against a provided root
-- VVK_WPRC is a Windows Phone Runtime Component the app uses for cryptography functions.
-
-
-Contributors
---------
-
-- Sander Hunt - code
-- Raimo Tammel - design
-- Sven Heiberg and Joonas Trussmann - project leads
+The repository is not used for active development, but will be kept up to date, so the code that can be found here is the code that is used for election. As the voting system used for legally binding elections must strictly follow the legislation, the actual development of Estonian i-voting system and i-vote verification application is supervised by Estonian State Electoral Office (ESEO, www.valimised.ee). Please refer to www.valimised.ee for further information.
